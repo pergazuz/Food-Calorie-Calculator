@@ -1,18 +1,11 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
 import food_bg from './images/food_bg.png';
-import circle_bg from './images/circle_bg.png';
-import logo from './images/logo.png';
-
 import Signup from './Signup';
 import Login from './Login';
 import NavBar from './NavBar'; // Import NavBar
 
 import {
-  faSearch,
-  faRightToBracket,
-  faUserPlus,
   faMagnifyingGlass
 } from '@fortawesome/free-solid-svg-icons';
 

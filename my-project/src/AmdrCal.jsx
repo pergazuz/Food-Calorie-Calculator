@@ -1,11 +1,18 @@
 import React, { useState } from 'react';
 import NavBar from './NavBar';
+import ResultsAmdrCal from './ResultsAmdrCal';
 
 const AmdrCal = () => {
   const [showLoginModal, setShowLoginModal] = useState(false);
   const [showSignupModal, setShowSignupModal] = useState(false);
 
   const [formData, setFormData] = useState({
+    meat: {
+      lowermeat: 0,
+      lowmeat: 0,
+      midmeat: 0,
+      hightmeat: 0
+    },
     milk: {
       highmilk: 0,
       midmilk: 0,
@@ -15,24 +22,18 @@ const AmdrCal = () => {
       vetgetable1: 0,
       vetgetable2: 0
     },
-    fruit: {
-      fruit: 0
-    },
     flour: {
       flour: 0
-    },
-    meat: {
-      lowermeat: 0,
-      lowmeat: 0,
-      midmeat: 0,
-      hightmeat: 0
     },
     oil: {
       oil: 0
     },
+    fruit: {
+      fruit: 0
+    },
     others: {
-      othenergy: 0,
-      othprotein: 0
+      energy: 0,
+      protein: 0
     }
   });
 
@@ -65,7 +66,7 @@ const AmdrCal = () => {
       ...formData,
       [categories[currentCategory]]: {
         ...formData[categories[currentCategory]],
-        [event.target.name]: Number(event.target.value)
+        [event.target.name]: event.target.value ? Number(event.target.value) : null
       }
     });
   };
@@ -77,7 +78,7 @@ const AmdrCal = () => {
     const { flour } = formData.flour;
     const { lowermeat, lowmeat, midmeat, hightmeat } = formData.meat;
     const { oil } = formData.oil;
-    const { othenergy, othprotein } = formData.others;
+    const { energy, protein } = formData.others;
   
     // calculate nutrient intake
     const carb_milk = 12 * (highmilk + midmilk + lowmilk);
@@ -103,10 +104,10 @@ const AmdrCal = () => {
     const lid_oil = 5*oil;
     const ener_oil = 9*lid_oil;
   
-    const protein_intake = pro_milk + pro_meat + pro_flour + pro_vet + othprotein;
+    const protein_intake = pro_milk + pro_meat + pro_flour + pro_vet + protein;
     const carb_intake = carb_milk + carb_flour + carb_fruit + carb_vet;
     const lipid_intake = lid_meat + lip_milk + lid_oil;
-    const cal_intake = ener_flour + ener_fruit + ener_meat + ener_milk + ener_oil + ener_vet + othenergy;
+    const cal_intake = ener_flour + ener_fruit + ener_meat + ener_milk + ener_oil + ener_vet + energy;
   
     setReportData({
       protein_intake, 
@@ -142,7 +143,7 @@ const AmdrCal = () => {
                     <div key={index}>
                       <label className="block mb-1 font-bold text-lg">{item.charAt(0).toUpperCase() + item.slice(1)}</label>
                       <input 
-                        type="number" 
+                        type="number min=0" 
                         name={item} 
                         onChange={handleInputChange} 
                         value={formData[categories[currentCategory]][item]}
@@ -186,7 +187,7 @@ const AmdrCal = () => {
               </div>
             </div>
           )}
-          {viewResults && <ResultsView />}
+          {viewResults && <ResultsAmdrCal reportData={reportData} />}
         </div>
       </div>
     </div>

@@ -6,7 +6,6 @@ import { AiOutlineSearch } from 'react-icons/ai';
 import FoodReport from './FoodReport';
 import ItemSettingsModal from './ItemSettingsModal'; // Import the new modal component
 import CategoryCard from './CategoryCard';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import NavBar from './NavBar'; // Import NavBar
 import { useNavigate } from 'react-router-dom'; // Import useNavigate
 
@@ -45,6 +44,8 @@ const FoodItemList = () => {
 
   const [showSettingsModal, setShowSettingsModal] = useState(false);
   const [selectedFoodItem, setSelectedFoodItem] = useState(null);
+
+
 
   const removeItem = (foodItemToRemove) => {
     setSelectedItems((prevItems) =>
