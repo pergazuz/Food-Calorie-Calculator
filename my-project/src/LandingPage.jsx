@@ -20,9 +20,7 @@ const LandingPage = () => {
         setShowLoginModal={setShowLoginModal}
         setShowSignupModal={setShowSignupModal}
       />
-
       <div className="flex items-center justify-between mt-4 p-10">
-        {/* Text on the left */}
         <div className="w-1/2">
           <h2 className="text-7xl font-semibold mb-6 ml-20 mt-[-180px]">Calorie Counter <br></br><span className="text-6xl font-normal mb-6">Your Daily Foods</span></h2>
           <p className="text-lg font-semibold text-[#A4A4A4] ml-20 mt-2">Unlock Your Optimal Health with Calorie Counter:<br></br> Track, Monitor, and Succeed on Your Journey.</p>
@@ -35,8 +33,6 @@ const LandingPage = () => {
              Search now
             </button>
         </div>
-
-        {/* Image on the right */}
         <div className="w-1/2">
           <img src={food_bg} alt="Food" />
         </div>
@@ -51,7 +47,6 @@ const LandingPage = () => {
           setShowModal={setShowLoginModal}
           setShowSignupModal={setShowSignupModal}
         />
-  
     </div>
   );
 }
