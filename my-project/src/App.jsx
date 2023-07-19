@@ -19,6 +19,7 @@ const App = () => {
         <Route path="/bmi-calculator" element={<BMICalculator />} />
         <Route path="/report" element={<ReportPage />} />
         <Route path="/AmdrCal" element={<AmdrCal />} />
+        <Route path="/History" element={<AmdrCal />} />
       </Routes>
     </Router>
   );

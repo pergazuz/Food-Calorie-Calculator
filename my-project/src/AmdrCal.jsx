@@ -119,21 +119,13 @@ const AmdrCal = () => {
     setViewResults(true);
   };
 
-  const ResultsView = () => (
-    <div className="bg-white rounded-lg shadow p-6 bg-opacity-90 border-2 border-[#F36234]">
-      <h2 className="text-3xl font-bold mb-6 text-center pt-4 pb-5">AMDR Results</h2>
-      <p>Protein Intake: {reportData.protein_intake}</p>
-      <p>Carb Intake: {reportData.carb_intake}</p>
-      <p>Lipid Intake: {reportData.lipid_intake}</p>
-      <p>Calorie Intake: {reportData.cal_intake}</p>
-    </div>
-  );
+
 
   return (
     <div>
       <NavBar setShowLoginModal={setShowLoginModal} setShowSignupModal={setShowSignupModal} />
       <div className="flex">
-        <div className="container mx-auto px-4 py-6 w-3/6 drop-shadow-xl">
+        <div className="container mx-auto px-4 py-6 w-3/6 mt-8  drop-shadow-xl">
           {!viewResults && (
             <div className="bg-white rounded-lg shadow p-6 bg-opacity-90 border-2 border-[#F36234]">
               <h2 className="text-3xl font-bold mb-6 text-center pt-4 pb-5">AMDR Calculate</h2>

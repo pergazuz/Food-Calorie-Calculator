@@ -136,7 +136,7 @@ const FoodItemList = () => {
     { name: 'ขนม', image: 'https://th.hellomagazine.com/wp-content/uploads/cache/2020/04/92266623_316412112658751_6109252347909152312_n/714229924.jpg' },
     { name: 'ข้าว เส้น', image: 'https://f.ptcdn.info/624/030/000/1429765739-naibanncom-o.jpg' },
     { name: 'ต้ม แกง', image: 'https://www.sgethai.com/wp-content/uploads/2022/09/8-25.jpg' },
-    { name: 'ยํา ลาบ', image: 'https://numsups.com/wp-content/uploads/2020/12/c1d9e57195cf4a7f897f93f2921a8e46-1024x683.jpg' },
+    { name: 'ยํา ลาบ', image: 'https://images.deliveryhero.io/image/fd-th/LH/o2ha-hero.jpg' },
     { name: 'ผลไม้', image: 'https://eatwellconcept.com/wp-content/uploads/2020/03/assorted-mixed-fruits_74190-6961.jpg' },
     { name: 'นมและผลิตภัณฑ์นม', image: 'https://static.hd.co.th/system/blog_articles/main_hero_images/000/004/572/original/iStock-854296650_%281%29.jpg' },
     { name: 'น้ำพริก น้ำจิ้ม', image: 'https://www.matichonacademy.com/wp-content/uploads/2020/02/%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%9E%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%81%E0%B8%B0%E0%B8%9B%E0%B8%B4.jpg' },

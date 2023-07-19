@@ -42,34 +42,33 @@ const NavBar = ({ setShowLoginModal, setShowSignupModal }) => {
           >
             Menu
           </NavLink>
-          <div className="relative inline-block text-left" onMouseEnter={toggleDropdown} onMouseLeave={toggleDropdown}>
-        <div className="inline-flex justify-between w-full">
-          <NavLink 
-            to="/AmdrCal"
-            className={({ match }) => 
-              match
-                ? "mb-2 lg:mb-0 lg:inline-block lg:mt-0 text-[#F36234] lg:ml-[70px]"
-                : "mb-2 lg:mb-0 lg:inline-block lg:mt-0 text-[#7A7A7A] hover:text-[#F36234] lg:ml-[70px]"
-            }
-          >
-            Services
-          </NavLink>
-          <FontAwesomeIcon  className="ml-2 -mr-1 h-5 w-5" aria-hidden="true" />
-        </div>
+          <div className="relative inline-block text-left">
+            <div className="inline-flex justify-between w-full" onClick={toggleDropdown}>
+              <NavLink 
+                className={({ match }) => 
+                  match
+                    ? "mb-2 lg:mb-0 lg:inline-block lg:mt-0 text-[#F36234] lg:ml-[70px]"
+                    : "mb-2 lg:mb-0 lg:inline-block lg:mt-0 text-[#7A7A7A] hover:text-[#F36234] lg:ml-[70px]"
+                }
+              >
+                Services
+              </NavLink>
+              <FontAwesomeIcon className="ml-2 -mr-1 h-5 w-5" aria-hidden="true" />
+            </div>
 
-        {dropdownOpen && (
-          <div className="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
-            <div className="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
-              <NavLink to="/bmi-calculator" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900" role="menuitem">
-                BMI Calculator
+            {dropdownOpen && (
+              <div className="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
+                <div className="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
+                <NavLink to="/bmi-calculator" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900" role="menuitem">
+                BMI and BEE Calculator
               </NavLink>
               <NavLink to="/AmdrCal" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900" role="menuitem">
                AmdrCal
               </NavLink>
-            </div>
+                </div>
+              </div>
+            )}
           </div>
-        )}
-      </div>
           <NavLink 
             to="/history" 
             className={({ isActive }) => 
