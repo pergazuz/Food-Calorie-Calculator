@@ -1,5 +1,5 @@
 # Food Calorie Calculator
-
+![Preview](./Preview.jpg)
 Food Calorie Calculator is a web application built using a combination of React, Tailwind CSS, and Django. This powerful tool allows users to track their daily calorie intake by providing them with a convenient way to search for and calculate the nutritional information of various foods.
 
 The core functionality of the Food Calorie Calculator revolves around its ability to search for foods and calculate their calorie content. Users can search for a specific food item or browse through categories to find the desired food. Once a food item is selected, the application retrieves its nutritional data from the backend and calculates the calories based on the specified serving size. Users can adjust the serving size to match their portions accurately.
